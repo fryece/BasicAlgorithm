@@ -13,7 +13,7 @@ public:
     MargeSort(/* args */);
     ~MargeSort();
 
-    virtual void sort(vector<int>& vec) override
+    void sort(vector<int>& vec) override
     {
         int left = 0;
         int right = vec.size()-1;

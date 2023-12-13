@@ -11,7 +11,7 @@ private:
     /* data */
 public:
 
-    virtual void sort(vector<int>& vec) override
+    void sort(vector<int>& vec) override
     {
         if(vec.size()<2) return;
         
