@@ -10,8 +10,6 @@ class SelectSort :public BaseSort
 private:
     /* data */
 public:
-    SelectSort(/* args */);
-    ~SelectSort();
 
     virtual void sort(vector<int>& vec) override
     {
@@ -28,11 +26,3 @@ public:
         }
     }
 };
-
-SelectSort::SelectSort(/* args */)
-{
-}
-
-SelectSort::~SelectSort()
-{
-}
