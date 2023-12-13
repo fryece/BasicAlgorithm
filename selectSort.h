@@ -8,7 +8,7 @@ using namespace std;
 class SelectSort :public BaseSort
 {
 private:
-    /* data */
+
 public:
 
     void sort(vector<int>& vec) override
