@@ -7,10 +7,7 @@ using namespace std;
 
 class SelectSort :public BaseSort
 {
-private:
-
 public:
-
     void sort(vector<int>& vec) override
     {
         if(vec.size()<2) return;
@@ -22,7 +19,7 @@ public:
             {
                 index = vec[index] > vec[j] ? j : index;
             }
-            swap(vec,i,index);
+            if(index != i)swap(vec,i,index);
         }
     }
 };

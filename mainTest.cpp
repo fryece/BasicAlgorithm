@@ -3,12 +3,12 @@
 
 using namespace std;
 
-#include "selectSort.h"
+#include "bubbleSort.h"
 
 int main()
 {
     vector<int> testVec = {2,1,3,4,6,5,9,8,7};
-    SelectSort s;
+    BubbleSort s;
     s.printVec(testVec);
     s.sort(testVec);
     s.printVec(testVec);

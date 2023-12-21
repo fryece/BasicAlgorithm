@@ -15,9 +15,9 @@ public:
     virtual void sort(vector<int>& vec) = 0;
     virtual void swap(vector<int>& vec, int i, int j)
     {
-        int temp = vec[i];
-        vec[i] = vec[j];
-        vec[j] = temp;
+        vec[j] = vec[j] ^ vec[i];
+        vec[i] = vec[j] ^ vec[i];
+        vec[j] = vec[j] ^ vec[i];
     }
     virtual void printVec(const vector<int>& vec)
     {
