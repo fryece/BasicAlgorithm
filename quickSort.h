@@ -1,6 +1,10 @@
+#ifndef QUICKSORT_H
+#define QUICKSORT_H
+
 #include "baseSort.h"
 
 #include <random>
+using namespace std;
 class QuickSort : public BaseSort
 {
 public:
@@ -11,12 +15,36 @@ public:
     }
     void sort2(vector<int>& vec,int leftIndex,int rightIndex)
     {
+        if(leftIndex >= rightIndex)return;
         //创建随机数
-        std::default_random_engine generator;
-        std::uniform_int_distribution<int> distribution(leftIndex, rightIndex);
-        int random_number = distribution(generator);
+        default_random_engine generator;
+        uniform_int_distribution<int> distribution(leftIndex, rightIndex);
+        int randNum = distribution(generator);
+        swap(vec,randNum,rightIndex);
+        
+        int i=leftIndex,j=leftIndex-1,k=rightIndex;
+        while(i<k)
+        {
+            if(vec[i]>vec[rightIndex])
+            {
+                swap(vec,i,k-1);
+                k--;
+            }
+            else if(vec[i]<vec[rightIndex])
+            {
+                swap(vec,i,j+1);
+                j++;
+                i++;
+            }
+            else
+            {
+                i++;
+            }
+        }
+        swap(vec,rightIndex,k);
 
-        int indexNum = vec[random_number];
-        cout<<"随机数为："<<indexNum<<endl;
+        sort2(vec,leftIndex,j);
+        sort2(vec,k+1,rightIndex);
     }
 };
+#endif

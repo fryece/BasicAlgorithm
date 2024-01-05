@@ -1,3 +1,5 @@
+#ifndef BASESORT_H
+#define BASESORT_H
 #include <iostream>
 #include <vector>
 #include <string>
@@ -15,9 +17,9 @@ public:
     virtual void sort(vector<int>& vec) = 0;
     virtual void swap(vector<int>& vec, int i, int j)
     {
-        vec[j] = vec[j] ^ vec[i];
-        vec[i] = vec[j] ^ vec[i];
-        vec[j] = vec[j] ^ vec[i];
+        int temp = vec[i];
+        vec[i]= vec[j];
+        vec[j]= temp;
     }
     virtual void printVec(const vector<int>& vec)
     {
@@ -38,3 +40,4 @@ BaseSort::BaseSort(/* args */)
 BaseSort::~BaseSort()
 {
 }
+#endif
