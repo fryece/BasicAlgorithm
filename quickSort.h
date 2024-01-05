@@ -27,13 +27,11 @@ public:
         {
             if(vec[i]>vec[rightIndex])
             {
-                swap(vec,i,k-1);
-                k--;
+                swap(vec,i,--k);
             }
             else if(vec[i]<vec[rightIndex])
             {
-                swap(vec,i,j+1);
-                j++;
+                swap(vec,i,++j);
                 i++;
             }
             else
