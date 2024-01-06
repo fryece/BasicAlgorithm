@@ -1,3 +1,5 @@
+#ifndef BUBBLESORT_H
+#define BUBBLESORT_H
 #include "baseSort.h"
 
 class BubbleSort : public BaseSort
@@ -15,3 +17,4 @@ public:
         }
     }
 };
+#endif

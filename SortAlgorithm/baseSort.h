@@ -11,8 +11,14 @@ class BaseSort
 private:
     /* data */
 public:
-    BaseSort(/* args */);
-    virtual ~BaseSort();
+    BaseSort(/* args */)
+    {
+
+    }
+    virtual ~BaseSort()
+    {
+        
+    }
 
     virtual void sort(vector<int>& vec) = 0;
     virtual void swap(vector<int>& vec, int i, int j)
@@ -32,12 +38,4 @@ public:
     }
     
 };
-
-BaseSort::BaseSort(/* args */)
-{
-}
-
-BaseSort::~BaseSort()
-{
-}
 #endif
